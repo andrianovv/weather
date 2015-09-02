@@ -1,0 +1,135 @@
+body{
+	background:#EEE6FF;
+	border-top:4px solid #0C708A;
+	margin:0;
+}
+
+#wrapper{
+	max-width:960px;
+	height:571px;
+	margin:auto;
+
+}
+
+header {
+	background:url(../images/header_background.png);
+	height:100px;
+	margin:0;
+}
+
+@font-face{
+	font-family:"Adigiana_Extreme"; 
+	src: url("../fonts/Adigiana_Extreme.eot?") format("eot"), 
+	url("../fonts/Adigiana_Extreme.woff") format("woff"), url("../fonts/Adigiana_Extreme.ttf") format("truetype"), 
+	url("../fonts/Adigiana_Extreme.svg#Adigiana_Extreme") format("svg"), url("../fonts/Adigiana_Extreme.otf") format("opentype");
+}
+
+header h1{
+	display:inline-block;
+	font:60px Adigiana_Extreme;
+	color:#0F1182;
+	margin:27px 0 0 36px;
+}
+
+header a:link{
+	text-decoration:none;
+	color:#0F1182;
+}
+
+header a:hover{
+	color:white;
+	cursor:pointer;
+}
+
+section{
+	background:url(../images/section_background.png);
+	height:443px;
+	margin:2px 0 2px 0;
+}
+
+@font-face{
+	font-family:"Avdira"; 
+	src: url("../fonts/Avdira.eot?") format("eot"),
+	url("../fonts/Avdira.woff") format("woff"), url("../fonts/Avdira.ttf") format("truetype"),
+	url("../fonts/Avdira.svg#Avdira") format("svg"), url("../fonts/Avdira.otf") format("opentype");
+}
+
+nav ul{
+	display:inline-block;
+	margin:8px 0;
+	padding:0 0px 0 380px;
+}
+
+nav li{
+	display:inline-block;
+	font:30px Avdira;
+	margin:0;
+	padding:0;
+	
+}
+
+nav li a:link{
+	text-decoration:none;
+	color:#FE1E43;
+	background:#89D4FE;
+	padding:1px 7px;
+	border:1px solid #2E8BFD;
+}
+
+nav li a:hover{
+	background:white;
+	color:#3532FF;
+	cursor:pointer;
+}
+
+nav  #home{
+	border-radius:20px 0 0 20px;
+}
+
+nav #comments{
+	border-radius:0 20px 20px 0;
+}
+section #content{
+	width:500px;
+	height:250px;
+	background:#50A4FE;
+	margin:15px 0 0 344px;
+	border-radius:30px 30px 0 0;
+	border:1px solid #F7C449;
+}
+
+
+
+
+footer{
+	height:30px;
+	background:#258DA6;
+}
+
+footer #author{
+	font: 20px Adigiana_Extreme;
+	color:white;
+	margin: 0 20px 0 0px;
+	padding:2px 0;
+	float:right;
+}
+
+footer #city{
+	width:100px;
+	display:inline;
+	float:left;
+	font:23px Adigiana_Extreme;
+	color:white;
+	margin:0 0 0 20px;
+	padding:1px 0; 
+}
+
+footer a:link{
+	text-decoration:none;
+	color:white;
+}
+
+footer a:hover{
+	color:#0F1182;
+	cursor:pointer;
+}
