@@ -1,19 +1,17 @@
 body{
 	background:#EEE6FF;
-	border-top:4px solid #0C708A;
 	margin:0;
 }
 
 #wrapper{
-	max-width:960px;
-	height:571px;
+	width:960px;
 	margin:auto;
 
 }
 
 header {
-	background:url(../images/header_background.png);
-	height:100px;
+	background:url(../images/header_background.jpg) repeat-x;
+	height:80px;
 	margin:0;
 }
 
@@ -26,24 +24,49 @@ header {
 
 header h1{
 	display:inline-block;
-	font:60px Adigiana_Extreme;
-	color:#0F1182;
-	margin:27px 0 0 36px;
-}
-
-header a:link{
-	text-decoration:none;
-	color:#0F1182;
-}
-
-header a:hover{
+	font:35px Adigiana_Extreme;
+	margin:12px 0 0 20px;
 	color:white;
-	cursor:pointer;
+}
+
+header #header_text{
+	display:inline-block;
+	float:right;
+	margin:20px 5px 0 0;
+	padding:0 0 0px 0;
+	font:25px Avdira;
+	color:#0C0C56;
+	height:30px
+}
+
+header #change_city{
+	padding:10px 20px 0 0;
+	width:150px;
+	float:right;
+}
+
+header #change_city, #input_city_name, #btn_get, #btn_reset{
+	font-family:Avdira;
+	text-align:center;
+	color:#0C0C56;
+}
+
+
+header #input_city_name{
+	font:italic 15px Verdana;
+}
+
+header #btn_get, #btn_reset{
+	font-size:15px;
+}
+
+header #btn{
+	padding:5px 0 0 0;
 }
 
 section{
-	background:url(../images/section_background.png);
-	height:443px;
+	background:url(../images/section_background.jpg) no-repeat;
+	height:553px;
 	margin:2px 0 2px 0;
 }
 
@@ -54,52 +77,67 @@ section{
 	url("../fonts/Avdira.svg#Avdira") format("svg"), url("../fonts/Avdira.otf") format("opentype");
 }
 
-nav ul{
-	display:inline-block;
-	margin:8px 0;
-	padding:0 0px 0 380px;
+section #content{
+	border:0px solid black;
+	width:960px;
+	height:180px;
+	margin:0;
+	float:right;
+	color:#0C0C56;
 }
 
-nav li{
-	display:inline-block;
-	font:30px Avdira;
-	margin:0;
-	padding:0;
+section #city_weather{
+	width:960px;
+	font:40px Avdira;
+	text-align:center;
+	padding:35px 0 0 0 ;
+}
+
+section #day{
+	height:220px;
+	padding:10px 0 0 0;
+}
+
+section #day_1, #day_2, #day_3{
+	width:318px;
+	padding:25px 0 0 0;
+}
+section #day_1{
+	float:left;
+}
+
+section #day_2{
+	float:left;
+}
+
+section #day_3{
+	float:right;
+}
+
+section .date_weather{
+	text-align:center;
+	font:bold 25px Avdira;
+	width:318px;
+	padding:3px 0 0 0;
 	
 }
 
-nav li a:link{
-	text-decoration:none;
-	color:#FE1E43;
-	background:#89D4FE;
-	padding:1px 7px;
-	border:1px solid #2E8BFD;
+section .image_weather{
+	float:right;
+	width:150px;
+	margin:0px;
+	padding:0 0 0 20px;
+	
 }
 
-nav li a:hover{
-	background:white;
-	color:#3532FF;
-	cursor:pointer;
+section .temperature_weather{
+	float:right;
+	width:105px;
+	text-align:right;
+	font:50px Avdira;
+	padding: 15px 0 0 0;
+	
 }
-
-nav  #home{
-	border-radius:20px 0 0 20px;
-}
-
-nav #comments{
-	border-radius:0 20px 20px 0;
-}
-section #content{
-	width:500px;
-	height:250px;
-	background:#50A4FE;
-	margin:15px 0 0 344px;
-	border-radius:30px 30px 0 0;
-	border:1px solid #F7C449;
-}
-
-
-
 
 footer{
 	height:30px;
@@ -107,21 +145,15 @@ footer{
 }
 
 footer #author{
-	font: 20px Adigiana_Extreme;
+	font: 14px Avdira;
 	color:white;
-	margin: 0 20px 0 0px;
-	padding:2px 0;
+	margin: 10px 20px 0 0;
+	padding:0;
 	float:right;
 }
 
-footer #city{
-	width:100px;
-	display:inline;
-	float:left;
-	font:23px Adigiana_Extreme;
-	color:white;
-	margin:0 0 0 20px;
-	padding:1px 0; 
+footer #year{
+	padding:0 0 0 6px;
 }
 
 footer a:link{

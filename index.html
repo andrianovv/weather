@@ -12,22 +12,45 @@
 	<body>
 		<div id="wrapper">
 			<header>
-				<h1><a href="#">Weather.net</a></h1>
+				<h1>Weather.net</h1>
+				<form id="change_city">
+					<input type="text" id="input_city_name" name="cityname" size="12" value="Lviv"><br>
+					<div id="btn">
+						<input type="button" id="btn_get" value="change">
+						<input type="reset" value="cancel" id="btn_reset">
+					</div>
+				</form>
+				<div id="header_text">Change city</div>
 			</header>
 			<section>
-				<nav>
-					<ul id="menu">
-						<li ><a href="#" id="home">Home</a></li>
-						<li><a href="#">Contacts</a></li>
-						<li><a href="#" id="comments">Comments</a></li>
-					</ul>
-				</nav>
-				<div id="content"></div>
+				<div id="content">
+					<div id="city_weather"></div>
+					<div id="day">
+						<div id="day_1">
+							<div class="date_weather"></div>  
+							<div class="image_weather"></div>
+							<div class="temperature_weather"></div>
+						</div>
+						<div id="day_2">
+							<div class="date_weather"></div>  
+							<div class="image_weather"></div>
+							<div class="temperature_weather"></div>
+						</div>
+						<div id="day_3">
+							<div class="date_weather"></div>  
+							<div class="image_weather"></div>
+							<div class="temperature_weather"></div>
+						</div>
+					</div>
+				</div>
 			</section>
 			<footer>
-				<div id="city">Lviv&nbsp 2015</div>
-				<div id="author">Created by&nbsp<a href="mailto:andrianov.vitali@gmail.com">Vitali Andrianov</a></div>
+				<div id="author">Created by&nbsp<a href="mailto:andrianov.vitali@gmail.com">Vitali Andrianov</a> <span id="year">2015</span></div>
 			</footer>
 		</div>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="scripts/namecity.js"></script>
+		<script src="scripts/geolocation.js"></script>
+    <script src="scripts/script.js"></script>
 	</body>
 </html>
