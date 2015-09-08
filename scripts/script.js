@@ -29,7 +29,7 @@ $(function()
 			$('#day_'+i+' '+'.temperature_weather').html(Math.round(temp)+'&deg;C');
 			if(i==1){$('#day_'+i+' '+'.date_weather').html('Today')};
 			if(i==2){$('#day_'+i+' '+'.date_weather').html('Tomorrow')};
-			if(i==3){$('#day_'+i+' '+'.date_weather').html('Wednesday')};
+			if(i==3){$('#day_'+i+' '+'.date_weather').html('Overmorrow')};
 		}
 	}
 
