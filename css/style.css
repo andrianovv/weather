@@ -29,41 +29,6 @@ header h1{
 	color:white;
 }
 
-header #header_text{
-	display:inline-block;
-	float:right;
-	margin:20px 5px 0 0;
-	padding:0 0 0px 0;
-	font:25px Avdira;
-	color:#0C0C56;
-	height:30px
-}
-
-header #change_city{
-	padding:10px 20px 0 0;
-	width:150px;
-	float:right;
-}
-
-header #change_city, #input_city_name, #btn_get, #btn_reset{
-	font-family:Avdira;
-	text-align:center;
-	color:#0C0C56;
-}
-
-
-header #input_city_name{
-	font:italic 15px Verdana;
-}
-
-header #btn_get, #btn_reset{
-	font-size:15px;
-}
-
-header #btn{
-	padding:5px 0 0 0;
-}
-
 section{
 	background:url(../images/section_background.jpg) no-repeat;
 	height:553px;
@@ -78,48 +43,75 @@ section{
 }
 
 section #content{
-	border:0px solid black;
 	width:960px;
-	height:180px;
 	margin:0;
 	float:right;
 	color:#0C0C56;
 }
 
-section #city_weather{
-	width:960px;
-	font:40px Avdira;
-	text-align:center;
-	padding:35px 0 0 0 ;
+section #first_line_section{
+	float:right;
 }
 
-section #day{
-	height:220px;
+section #change_city{
+	padding:10px 10px 0 0;
+	width:185px;
+	float:right;
+}
+
+section #input_city_name, #btn_get, #btn_reset{
+	font:15px Avdira;
+	color:#0C0C56;
+}
+
+section #btn{
+	padding:5px 0 0 0;
+}
+
+section #btn_get{
+	cursor:pointer;
+}
+
+section #btn_reset{
+	padding:0 7px 0 6px;
+	text-align:center;
+	cursor:pointer;
+}
+
+section #city_weather{
+	width:765px;
+	font:45px Avdira;
+	text-align:center;
 	padding:10px 0 0 0;
 }
 
-section #day_1, #day_2, #day_3{
-	width:318px;
-	padding:25px 0 0 0;
+section #day{
+	height:200px;
+	padding:5px 0 0 0;
 }
-section #day_1{
+
+section #day_0, #day_1, #day_2{
+	width:319px;
+	padding:0;
+}
+section #day_0, #day_1{
 	float:left;
 }
 
 section #day_2{
-	float:left;
-}
-
-section #day_3{
 	float:right;
 }
 
 section .date_weather{
 	text-align:center;
 	font:bold 25px Avdira;
-	width:318px;
-	padding:3px 0 0 0;
-	
+	width:319px;
+	padding:13px 0 0 0px;
+}
+
+section #day_2 .date_weather{
+	padding:30px 0 14px 0;
+	font-size:27px;
 }
 
 section .image_weather{
@@ -127,16 +119,23 @@ section .image_weather{
 	width:150px;
 	margin:0px;
 	padding:0 0 0 20px;
-	
 }
 
 section .temperature_weather{
 	float:right;
-	width:105px;
+	width:148px;
 	text-align:right;
 	font:50px Avdira;
-	padding: 15px 0 0 0;
-	
+	padding:20px 0 20px 0;
+}
+
+section .description{
+	width:319px;
+	height:25px;
+	padding:5px 0 0 0;
+	float:right;
+	text-align:center;
+	font:20px Avdira;
 }
 
 footer{

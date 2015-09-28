@@ -17,19 +17,43 @@ $(function()
 
 	function data_received(data)
 	{
-		var offset = (new Date()).getTimezoneOffset()*60*1000; // Відхилення від UTC в секундах
+		var offset = (new Date()).getTimezoneOffset()*60; // Відхилення години в форматі UTC і значення години компа в секундах
 		var city=data.city.name, country=data.city.country;
 		$('#city_weather').html(city+' <b> '+country+'</b>');
 		
+		for(var i=0;i<3;i++)
+		{
+			var picture=data.list[i].weather[0].icon, description=data.list[i].weather[0].description;
+			var weekDate, month, clock=new Date((data.list[i].dt-offset)*1000), clockComp=new Date();
+			var days=['Неділя', 'Понеділок', 'Вівторок', 'Середа', 'Четвер', 'П\'ятниця', 'Субота'];
+			weekDate=clock.getDate();
 			
-		for(var i=1;i<4;i++)
-		{ 
-			var picture=data.list[i].weather[0].icon, temp=data.list[i].temp.day, clock=new Date(data.list[i].dt*1000 - offset);
+			if(weekDate<10) weekDate='0'+weekDate;
+			month=clock.getMonth()+1;
+			if(month<10) month='0'+month;
 			$('#day_'+i+' '+'.image_weather').html('<img src="images/icons/'+picture+'.png" />');
-			$('#day_'+i+' '+'.temperature_weather').html(Math.round(temp)+'&deg;C');
-			if(i==1){$('#day_'+i+' '+'.date_weather').html('Today')};
-			if(i==2){$('#day_'+i+' '+'.date_weather').html('Tomorrow')};
-			if(i==3){$('#day_'+i+' '+'.date_weather').html('Overmorrow')};
+		
+			if(clockComp.getHours()>5&&clockComp.getHours()<11){
+				temp=data.list[i].temp.morn;
+				$('#day_'+i+' '+'.temperature_weather').html(Math.round(temp)+'&deg;C');
+			} 
+			if(clockComp.getHours()>10&&clockComp.getHours()<18){
+				temp=data.list[i].temp.day;
+				$('#day_'+i+' '+'.temperature_weather').html(Math.round(temp)+'&deg;C');
+			}
+			if(clockComp.getHours()>17&&clockComp.getHours()<23){
+				temp=data.list[i].temp.eve;
+				$('#day_'+i+' '+'.temperature_weather').html(Math.round(temp)+'&deg;C');
+			}
+			if((clockComp.getHours()>22&&clockComp.getHours()<24)||(clockComp.getHours()>=0&&clockComp.getHours()<6)){
+				temp=data.list[i].temp.night;
+				$('#day_'+i+' '+'.temperature_weather').html(Math.round(temp)+'&deg;C');
+			}	
+			
+			$('#day_'+i+' '+'.description').html(description);		
+			if(i==0) $('#day_'+i+' '+'.date_weather').html('Сьогодні'+'<br>'+days[clock.getDay()]+' '+weekDate+'\.'+month);
+			if(i==1) $('#day_'+i+' '+'.date_weather').html('Завтра'+'<br>'+days[clock.getDay()]+' '+weekDate+'\.'+month);
+			if(i==2) $('#day_'+i+' '+'.date_weather').html(days[clock.getDay()]+' '+weekDate+'\.'+month);
 		}
 	}
 

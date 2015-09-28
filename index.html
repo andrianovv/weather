@@ -13,32 +13,38 @@
 		<div id="wrapper">
 			<header>
 				<h1>Weather.net</h1>
-				<form id="change_city">
-					<input type="text" id="input_city_name" name="cityname" size="12" value="Lviv"><br>
-					<div id="btn">
-						<input type="button" id="btn_get" value="change">
-						<input type="reset" value="cancel" id="btn_reset">
-					</div>
-				</form>
-				<div id="header_text">Change city</div>
 			</header>
 			<section>
 				<div id="content">
-					<div id="city_weather"></div>
+				  <div id="first_line_section">
+						<form id="change_city">
+							<input type="text" id="input_city_name" name="cityname" size="22" required 
+							placeholder="Введіть інше місто"><br>
+							<div id="btn">
+								<input type="button" id="btn_get" value="Змінити">
+								<input type="reset" id="btn_reset" value="Відмінити">
+							</div>
+						</form>
+						<div id="city_weather"></div>
+					</div>
 					<div id="day">
+						<div id="day_0">
+							<div class="date_weather"></div> 
+							<div class="description"></div>
+							<div class="image_weather" alt="image_weather"></div>
+							<div class="temperature_weather"></div>
+							
+						</div>
 						<div id="day_1">
-							<div class="date_weather"></div>  
-							<div class="image_weather"></div>
+							<div class="date_weather"></div> 
+							<div class="description"></div>
+							<div class="image_weather" alt="image_weather"></div>
 							<div class="temperature_weather"></div>
 						</div>
 						<div id="day_2">
-							<div class="date_weather"></div>  
-							<div class="image_weather"></div>
-							<div class="temperature_weather"></div>
-						</div>
-						<div id="day_3">
-							<div class="date_weather"></div>  
-							<div class="image_weather"></div>
+							<div class="date_weather"></div> 
+							<div class="description"></div>
+							<div class="image_weather" alt="image weather"></div>
 							<div class="temperature_weather"></div>
 						</div>
 					</div>
